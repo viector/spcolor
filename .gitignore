@@ -1,0 +1,6 @@
+results/*
+runs/*
+saved_models/*
+opt.txt
+*.pyc
+*.pth

@@ -1,0 +1,55 @@
+train_stego.py 2023-07-02 03:41:18
+------------ Options -------------
+batch_size: 8
+beta1: 0.5
+checkpoint_dir: /dataset/checkpoints/spcolor/checkpoints/stego_pro_s
+checkpoint_dir_out: /dataset/checkpoints/spcolor/checkpoints/stego_pro_s
+contextual_loss_direction: forward
+data_root: /home/zhanbo/remote/video/video_pair3/
+data_root_imagenet: /dataset/ImageNet_train/
+data_root_imagenet10k: /dataset/ImageNet_val/val_10000
+data_root_wild: /dataset/from_paper/SSCN
+data_videoclip: /dataset/videvo/test/imgs/CoupleRidingMotorbike
+domain_invariant: False
+epoch: 40
+gpu_ids: 0,1
+ic: 4
+image_size: [256, 256]
+load_pretrained_model: True
+local_rank: 0
+log_path: /dataset/checkpoints/spcolor/runs/stego_pro_s
+lr: 2e-05
+lr_discrim: 0.0002
+lr_gamma: 0.5
+lr_step: 20000
+luminance_noise: 2.0
+nonzero_placeholder_probability: 0.0
+num_class: 27
+permute_data: True
+print_step: 10
+real_reference_probability: 0.8
+reference_order: 1
+resume: True
+resume_epoch: 0
+resume_iter: 120000
+save_checkpoint_step: 10000
+statistic_only: False
+strict_load: False
+tb_log_step: 1000
+use_masked_percept: True
+val_only: True
+val_output_path: /dataset/checkpoints/spcolor/SSCN
+val_wild: True
+validation_step: 5000
+weight_contextual: 0.2
+weight_discrim: 1.0
+weight_gan: 0.4
+weight_nonlocal_consistent: 0.0
+weight_nonlocal_smoothness: 0.0
+weight_perceptual: 0.01
+weight_smoothness: 2.0
+weigth_l1: 2.0
+with_bad: True
+with_mid: True
+workers: 4
+-------------- End ----------------
