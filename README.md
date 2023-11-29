@@ -1,5 +1,6 @@
-# SPCOLOR: Semantic-prior Guided Exemplar-based Colorization
-This is the implementation for  SPCOLOR: Semantic-prior Guided Exemplar-based Colorization. 
+# SPCOLOR: Semantic-prior Guided Exemplar-based Image Colorization
+This is the implementation for  [SPCOLOR: Semantic-prior Guided Exemplar-based Image Colorization](https://arxiv.org/abs/2304.06255). 
+
 
 **training**
 
