@@ -191,7 +191,7 @@ class VideosDataset_ImageNet(data.Dataset):
                 self_ref_flag = torch.ones_like(I_reference_output)
                 I_reference_video_rgb = self.transforms_stego(I_reference_video)
 
-            I1_lab= self.transforms_imagenet(I1)
+            I1_lab= self.transforms_imagenet(I1.convert("L").convert("RGB"))
             I1_rgb= self.transforms_stego(I1)
             
             outputs = [
@@ -288,7 +288,7 @@ class VideosDataset_wild(data.Dataset):
                 I_reference_video_real = I_reference_video_real.resize([256,256])
             I_reference_video_rgb = self.transforms_stego(I_reference_video_real)
             I_reference_output = self.transforms_imagenet(I_reference_video_real)
-            I1_rgb = self.transforms_stego(I1)
+            I1_rgb = self.transforms_stego(I1.convert("L").convert("RGB"))
             I1 = self.transforms_imagenet(I1)
             
             outputs = [
@@ -350,7 +350,7 @@ class VideosDataset_ImageNet_10k(data.Dataset):
                     break
             I_reference_video_rgb = self.transforms_stego(I_reference_video_real)
             I_reference_output = self.transforms_imagenet(I_reference_video_real)
-            I1_rgb = self.transforms_stego(I1)
+            I1_rgb = self.transforms_stego(I1.convert("L").convert("RGB"))
             I1 = self.transforms_imagenet(I1)
             
             outputs = [
@@ -421,7 +421,7 @@ class VideosDataset_videoclip(data.Dataset):
             #print("success",3)
             I_reference_video_rgb = self.transforms_stego(I_reference_video_real)
             I_reference_output = self.transforms_imagenet(I_reference_video_real)
-            I1_rgb = self.transforms_stego(I1)
+            I1_rgb = self.transforms_stego(I1.convert("L").convert("RGB"))
             I1 = self.transforms_imagenet(I1)
             outputs = [
                 I1,
